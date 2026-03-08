@@ -4,7 +4,55 @@
     .learn-section {
 
 
-        .learn-div {
+        .learn-div-one {
+            background-image: url(/src/learn-bg-two-img.webp);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $blue-black;
+            background-position: center;
+            background-size: cover;
+            padding-bottom: 40px;
+
+            img {
+                width: 414px;
+                margin-top: 40px;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 46px;
+                letter-spacing: 0%;
+                color: white;
+                width: 414px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                color: $light-grey;
+                width: 415px;
+            }
+
+            button {
+                width: 414px;
+                height: 76px;
+                border-radius: 32px;
+                border-style: none;
+                background-color: $main-red;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: white;
+            }
+        }
+
+        .learn-div-two {
             background-image: url(/src/learn-bg-first-img.webp);
             display: flex;
             flex-direction: column;
@@ -28,7 +76,7 @@
                 width: 414px;
             }
 
-            p{
+            p {
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
@@ -37,7 +85,7 @@
                 width: 415px;
             }
 
-            button{
+            button {
                 width: 414px;
                 height: 76px;
                 border-radius: 32px;
@@ -53,7 +101,7 @@
         }
     }
 
-    .explore-section{
+    .explore-section {
         background-image: url(/src/explore-bg-img.webp);
         background-position: center;
         background-size: cover;
@@ -61,8 +109,8 @@
         flex-direction: column;
         align-items: center;
         height: 2063px;
-        
-        h1{
+
+        h1 {
             font-weight: 700;
             font-size: 40px;
             line-height: 46px;
@@ -73,32 +121,51 @@
             max-width: 314px;
         }
 
-        .explore-scrole{
+        circle{
+            transition-duration: 0.5s;
+            cursor: pointer;
+
+            &:hover{
+                fill: #7b888f;
+            }
+        }
+
+        .explore-scrole {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
             margin-bottom: 20px;
 
-            .explore-img-one{
+            .explore-img-one {
                 display: none;
             }
 
-            .explore-img-three{
+            .explore-img-three {
                 display: none;
+            }
+
+            svg{
+                transition-duration: 0.5s;
+                cursor: pointer;
+
+                &:hover{
+                    scale: 1.25;
+                }
             }
         }
 
-        .explore-bottom-div{
+        .explore-bottom-div {
             margin-top: 760px;
+            width: 100%;
 
-            .explore-bottom-card-first{
+            .explore-bottom-card-first {
                 background-color: rgba(2, 12, 33, 0.87);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
-                h1{
+                h1 {
                     font-weight: 700;
                     font-size: 40px;
                     line-height: 46px;
@@ -109,7 +176,7 @@
                     width: 214px;
                 }
 
-                p{
+                p {
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 24px;
@@ -120,14 +187,13 @@
                 }
             }
 
-            .explore-bottom-card{
+            .explore-bottom-card {
                 background-color: rgba(2, 12, 33, 0.87);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 500px;
 
-                h1{
+                h1 {
                     font-weight: 700;
                     font-size: 40px;
                     line-height: 46px;
@@ -138,7 +204,7 @@
                     width: 214px;
                 }
 
-                p{
+                p {
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 24px;
@@ -147,6 +213,586 @@
                     color: $light-grey;
                     max-width: 314px;
                 }
+            }
+        }
+    }
+
+    .hills-section {
+        background-image: url(/src/hills-bg-adaptiv-one.webp);
+        background-repeat: no-repeat;
+        height: 741px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 46px;
+            letter-spacing: 0%;
+            text-align: center;
+            color: black;
+            width: 314px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            text-align: center;
+            color: $light-grey;
+            width: 314px;
+        }
+
+        button {
+            width: 314px;
+            height: 73px;
+            border-radius: 122px;
+            border-style: none;
+            background-color: $main-red;
+            color: white;
+        }
+
+        img {
+            content: url(/src/hills-bg-adaptiv-two.webp);
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            margin-top: 380px;
+        }
+    }
+
+    .live-section {
+        background-image: url(/src/live-bg-img.webp);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(1, 10, 32, 1);
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 46px;
+            letter-spacing: 0%;
+            text-align: center;
+            width: 314px;
+            height: 380px;
+            color: white;
+            margin-top: 60px;
+        }
+
+        img {
+            width: 314px;
+            height: 192px;
+        }
+
+        .live-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 314px;
+                height: 192px;
+                margin-top: 50px;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: white;
+
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: $light-grey;
+                width: 314px;
+                height: 142px;
+            }
+        }
+    }
+
+    .galary-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 46px;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            text-align: center;
+            color: $light-grey;
+            width: 314px;
+        }
+
+        .galary-img-main-div {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            div {
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 151px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .instruction-section {
+        background-color: rgba(220, 232, 242, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 80px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 46px;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        svg {
+            display: none;
+        }
+
+        .instruction-part-adaptive {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 314px;
+            }
+
+            h2 {
+                display: none;
+            }
+
+            .instruction-description-adaptive {
+                display: none;
+            }
+
+            .instruction-description-adaptive-img {
+                display: none;
+            }
+
+            .instruction-description {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: $light-grey;
+            }
+
+            .instruction-show-text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: $main-red;
+            }
+        }
+
+        .instruction-part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 314px;
+            }
+
+            .instruction-num {
+                background-color: $main-red;
+                padding: 9px 21px 9px 21px;
+                border-radius: 100%;
+                font-weight: 500;
+                font-size: 26.41px;
+                line-height: 38.15px;
+                letter-spacing: 0px;
+                text-align: center;
+                vertical-align: middle;
+                color: white;
+
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: $blue-black;
+            }
+
+            .instruction-description-adaptive {
+                display: none;
+            }
+
+            .instruction-description {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: $light-grey;
+            }
+
+            .instruction-show-text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: $main-red;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .learn-section {
+
+            .learn-div-one {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 50px;
+                height: 771px;
+
+                button {
+                    width: 180px;
+                    height: 59px;
+                    border-radius: 32px;
+                }
+
+                img {
+                    width: 630px;
+                }
+            }
+
+            .learn-div-two {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 50px;
+                height: 771px;
+
+                button {
+                    width: 180px;
+                    height: 59px;
+                    border-radius: 32px;
+                }
+
+                img {
+                    width: 630px;
+                }
+            }
+        }
+
+        .explore-section {
+
+            h1 {
+                margin-top: 100px;
+                margin-bottom: 50px;
+                max-width: 615px;
+            }
+
+            .explore-scrole {
+
+                .explore-img-one {
+                    display: block;
+                }
+
+                .explore-img-three {
+                    display: block;
+                }
+            }
+
+            .explore-bottom-div {
+
+                .explore-bottom-card-first {
+
+                    h1 {
+                        width: 615px;
+                    }
+
+                    p {
+                        width: 484px;
+                    }
+                }
+
+                .explore-bottom-cards-adaptive {
+                    display: flex;
+
+                    .explore-bottom-card {
+                        width: 100%;
+                        padding-bottom: 211px;
+                    }
+                }
+            }
+        }
+
+        .hills-section {
+            background-image: url(/src/hills-bg-first-img.webp);
+            padding-bottom: 0;
+
+            h1 {
+                font-weight: 700;
+                font-size: 42px;
+                line-height: 50px;
+                letter-spacing: 0px;
+                text-align: center;
+                width: 614px;
+            }
+
+            p {
+                width: 470px;
+            }
+
+            button {
+                width: 210px;
+                height: 64px;
+            }
+
+            img {
+                content: url(/src/hills-bg-two-img.webp);
+                margin-top: 0;
+            }
+        }
+
+        .live-section {
+            padding-bottom: 200px;
+
+            h1 {
+                width: 906px;
+                height: 142px;
+                margin-top: 200px;
+                margin-bottom: 100px;
+            }
+
+            img {
+                width: 1056px;
+                height: 594px;
+            }
+
+            .live-card {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                margin-top: 100px;
+
+
+                h2 {
+                    margin: 0;
+                    text-align: start;
+                }
+
+                p {
+                    position: relative;
+                    top: 60px;
+                    height: 80px;
+                    text-align: start;
+                    width: 334px;
+                }
+            }
+
+            .live-card-container {
+                display: flex;
+            }
+        }
+
+        .galary-section {
+
+            h1 {
+                margin-top: 200px;
+            }
+
+            p {
+                width: 451px;
+                height: 47px;
+                margin-bottom: 50px;
+            }
+
+            .galary-img-main-div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: start;
+
+                    .galary-img-one {
+                        width: 370px;
+                        height: 530px;
+                    }
+
+                    .galary-img-two {
+                        width: 370px;
+                        height: 210px;
+                    }
+
+                    .galary-img-three {
+                        width: 370px;
+                        height: 370px;
+                    }
+
+                    .galary-img-six {
+                        width: 370px;
+                        height: 530px;
+                        position: relative;
+                        bottom: 320px;
+                    }
+
+                    .galary-img-four {
+                        width: 370px;
+                        height: 210px;
+                    }
+
+                    .galary-img-fife {
+                        width: 370px;
+                        height: 370px;
+                        position: relative;
+                        bottom: 160px;
+                    }
+                }
+            }
+        }
+
+        .instruction-section {
+            display: flex;
+            align-items: start;
+            padding-left: 25%;
+
+            svg {
+                position: absolute;
+                margin-left: 27.5px;
+                margin-top: 182px;
+                display: block;
+                z-index: 1;
+            }
+
+            .instruction-part-adaptive {
+                padding-left: 115px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: start;
+                gap: 60px;
+
+                .instruction-title {
+                    text-align: start;
+                }
+
+                .instruction-description {
+                    display: none;
+                }
+
+                .instruction-description-adaptive {
+                    display: block;
+                    width: 1000px;
+                    font-weight: 400;
+                    font-size: 23.47px;
+                    line-height: 38.15px;
+                    letter-spacing: 0px;
+                    color: $light-grey;
+                }
+
+                .instruction-show-text {
+                    display: none;
+                }
+
+
+                .instruction-description-adaptive-img {
+                    display: block;
+                    width: 446px;
+                    font-weight: 400;
+                    font-size: 23.47px;
+                    line-height: 38.15px;
+                    letter-spacing: 0px;
+                    color: $light-grey;
+                }
+
+                .instruction-title-img {
+                    display: block;
+                    text-align: start;
+                }
+            }
+
+            .instruction-part {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: start;
+                gap: 60px;
+
+                .instruction-title {
+                    text-align: start;
+                }
+
+                .instruction-description {
+                    display: none;
+                }
+
+                .instruction-description-adaptive {
+                    display: block;
+                    width: 1000px;
+                    font-weight: 400;
+                    font-size: 23.47px;
+                    line-height: 38.15px;
+                    letter-spacing: 0px;
+                    color: $light-grey;
+                }
+
+                .instruction-show-text {
+                    display: none;
+                }
+
+                .instruction-num{
+                    z-index: 2;
+                }
+
             }
         }
     }

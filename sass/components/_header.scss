@@ -2,35 +2,40 @@ $main-red: #DD2242;
 $light-grey: #939393;
 $blue-black: rgba(1, 10, 32, 1);
 
-.header{
+.header {
     background-image: url(/src/preview-bg-img.webp);
     background-position: center;
     background-size: cover;
 
-    nav{
-        display: flex;
-        justify-content: center;
-    }
+    nav {
 
-    ul{
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .nav-sub-text {
+            display: none;
+        }
 
-        .nav-logo-text{
-            margin-right: 200px;
+        .nav-section {
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
-    .preview-section{
+    .preview-section {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        h1{
+        .preview-svg-text-div{
+            
+            svg{
+                display: none;
+            }
+        }
+
+        h1 {
             font-weight: 900;
             font-size: 58.15px;
             line-height: 63px;
@@ -41,7 +46,7 @@ $blue-black: rgba(1, 10, 32, 1);
             width: 314px;
         }
 
-        button{
+        button {
             width: 314px;
             height: 56px;
             background-color: $main-red;
@@ -56,18 +61,18 @@ $blue-black: rgba(1, 10, 32, 1);
             color: white;
         }
 
-        .preview-cards-div{
+        .preview-cards-div {
             margin-top: 80px;
             display: flex;
             flex-direction: column;
         }
 
-        .preview-card{
+        .preview-card {
             background-color: #0000008c;
             width: 284px;
             padding: 25px;
 
-            .preview-card-num{
+            .preview-card-num {
                 color: $main-red;
                 font-weight: 900;
                 font-size: 16px;
@@ -76,7 +81,7 @@ $blue-black: rgba(1, 10, 32, 1);
                 text-transform: uppercase;
             }
 
-            h2{
+            h2 {
                 font-weight: 700;
                 font-size: 26.41px;
                 line-height: 41.08px;
@@ -84,7 +89,7 @@ $blue-black: rgba(1, 10, 32, 1);
                 color: white;
             }
 
-            .preview-card-description{
+            .preview-card-description {
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
@@ -95,10 +100,97 @@ $blue-black: rgba(1, 10, 32, 1);
             }
         }
 
-        img{
+        img {
             width: 334px;
             margin-bottom: 40px;
         }
     }
-}
 
+    @media (min-width:1200px) {
+
+        nav {
+
+            .nav-section {
+
+                .nav-sub-text {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-transform: uppercase;
+                    gap: 20px;
+
+                    a{
+                        color: white;
+                        cursor: pointer;
+                        transition-duration: 0.5s;
+
+                        &:hover{
+                            transform: translateY(-10px);
+                            color: $light-grey;
+                        }
+                    }
+                }
+
+                .nav-full-text-div{
+                    display: flex;
+                    gap: 40px;
+                }
+            }
+        }
+
+        .preview-section{
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .preview-svg-text-div{
+                display: flex;
+                gap: 100px;
+                margin-top: 100px;
+                margin-left: 50px;
+
+                svg{
+                    display: block;
+                }
+            }
+
+            .preview-cards-div{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .preview-cards-div-adaptive{
+                display: flex;
+                align-items: center;
+                align-self: flex-end;
+
+                .preview-video{
+                    position: relative;
+                    top: 28px;
+                    width: 417px;
+                    height: 254px;
+                    margin: 0;
+                }
+            }
+
+            .preview-head-text{
+                font-weight: 900;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: 0%;
+                text-transform: uppercase;
+
+            }
+
+            .preview-btn{
+                width: 271px;
+                height: 82px;
+                border-radius: 211px;
+            }
+        }
+    }
+}

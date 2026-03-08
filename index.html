@@ -9,14 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/modern-normalize.css">
 </head>
 
 <body>
     <header class="header">
         <nav>
-            <ul class="nav-section">
-                <li class="nav-logo-text"><img src="./src/nav-text-img.webp" alt=""></li>
-                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="nav-section">
+                <div class="nav-full-text-div">
+                    <img src="./src/nav-text-img.webp" alt="">
+                    <div class="nav-sub-text">
+                        <a href="#destinations">destinations</a>
+                        <a href="#experiences">experiences</a>
+                        <a href="#about">about</a>
+                        <a href="#gallery">gallery</a>
+                    </div>
+                </div>
+                <div class="nav-svg-div">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_28_4362)">
                             <path
                                 d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
@@ -28,8 +38,8 @@
                             </clipPath>
                         </defs>
                     </svg>
-                </li>
-                <li><svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_28_4365)">
                             <g clip-path="url(#clip0_28_4365)">
                                 <path d="M4 18H22.0094V16H4V18ZM4 13H22.0094V11H4V13ZM4 6V8H22.0094V6H4Z"
@@ -54,50 +64,81 @@
                             </clipPath>
                         </defs>
                     </svg>
-                </li>
-            </ul>
-        </nav>
-        <section class="preview-section">
-            <h1 class="preview-head-text">explore indonesia</h1>
-            <button class="preview-btn">Start travelling</button>
-            <div class="preview-cards-div">
-                <div class="preview-card">
-                    <p class="preview-card-num">01</p>
-                    <h2 class="preview-card-title">Title here</h2>
-                    <p class="preview-card-description">Lorem ipsum dolor sit amet et amet ist ame.</p>
-                </div>
-                <div class="preview-card">
-                    <p class="preview-card-num">02</p>
-                    <h2 class="preview-card-title">Title here</h2>
-                    <p class="preview-card-description">Lorem ipsum dolor sit amet et amet ist ame.</p>
-                </div>
-                <div class="preview-card">
-                    <p class="preview-card-num">03</p>
-                    <h2 class="preview-card-title">Title here</h2>
-                    <p class="preview-card-description">Lorem ipsum dolor sit amet et amet ist ame.</p>
                 </div>
             </div>
-            <img src="./src/preview-video-img.webp" alt="" class="preview-video">
+        </nav>
+        <section class="preview-section">
+            <div class="preview-svg-text-div">
+                <svg width="12" height="396" viewBox="0 0 12 396" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2.00104" height="296" transform="matrix(1 0 0 -1 5.00049 396)" fill="white" />
+                    <rect width="2.00104" height="296" transform="matrix(1 0 0 -1 5.00049 396)" fill="white" />
+                    <g filter="url(#filter0_d_0_1)">
+                        <rect width="4.00208" height="100" transform="matrix(1 0 0 -1 4 100)" fill="#DD2242" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_0_1" x="0" y="0" width="12.0022" height="108" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+
+                <div class="preview-interactive-div">
+                    <h1 class="preview-head-text">explore indonesia</h1>
+                    <button class="preview-btn">Start travelling</button>
+                </div>
+            </div>
+            <div class="preview-cards-div-adaptive">
+                <div class="preview-cards-div">
+                    <div class="preview-card">
+                        <p class="preview-card-num">01</p>
+                        <h2 class="preview-card-title">Title here</h2>
+                        <p class="preview-card-description">Lorem ipsum dolor sit amet et amet ist ame.</p>
+                    </div>
+                    <div class="preview-card">
+                        <p class="preview-card-num">02</p>
+                        <h2 class="preview-card-title">Title here</h2>
+                        <p class="preview-card-description">Lorem ipsum dolor sit amet et amet ist ame.</p>
+                    </div>
+                    <div class="preview-card">
+                        <p class="preview-card-num">03</p>
+                        <h2 class="preview-card-title">Title here</h2>
+                        <p class="preview-card-description">Lorem ipsum dolor sit amet et amet ist ame.</p>
+                    </div>
+                </div>
+                <img src="./src/preview-video-img.webp" alt="" class="preview-video">
+            </div>
         </section>
     </header>
     <main class="main">
-        <section class="learn-section">
-            <div class="learn-div">
+        <section class="learn-section" id="destinations">
+            <div class="learn-div-one">
                 <img src="./src/learn-first-img.webp" alt="">
-                <h2>The walkways of Indonesia spellbind</h2>
-                <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Fusce commodo magna et libero mollis
-                    rhoncus.</p>
-                <button>Learn More</button>
+                <div class="learn-interactive-div">
+                    <h2>The walkways of Indonesia spellbind</h2>
+                    <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Fusce commodo magna et libero mollis
+                        rhoncus.</p>
+                    <button>Learn More</button>
+                </div>
             </div>
-            <div class="learn-div">
+            <div class="learn-div-two">
                 <img src="./src/learn-two-img.webp" alt="">
-                <h2>Perfect beaches exude relaxation and fun</h2>
-                <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Fusce commodo magna et libero mollis
-                    rhoncus.</p>
-                <button>Learn More</button>
+                <div class="learn-interactive-div">
+                    <h2>Perfect beaches exude relaxation and fun</h2>
+                    <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Fusce commodo magna et libero mollis
+                        rhoncus.</p>
+                    <button>Learn More</button>
+                </div>
             </div>
         </section>
-        <section class="explore-section">
+        <section class="explore-section" id="experiences">
             <h1>Explore Our Secrets</h1>
             <div class="explore-scrole">
                 <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,12 +159,12 @@
             </div>
 
             <svg width="196" height="19" viewBox="0 0 196 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="85.5" cy="9.5" r="9.5" fill="#85A3B2" />
-                    <circle cx="44.5" cy="9.5" r="9.5" fill="#85A3B2" />
-                    <circle cx="9.5" cy="9.5" r="9.5" fill="#85A3B2" />
-                    <circle cx="186.5" cy="9.5" r="9.5" fill="#85A3B2" />
-                    <rect x="110" width="50" height="19" rx="9.5" fill="#DD2242" />
-                </svg>
+                <circle cx="85.5" cy="9.5" r="9.5" fill="#85A3B2" />
+                <circle cx="44.5" cy="9.5" r="9.5" fill="#85A3B2" />
+                <circle cx="9.5" cy="9.5" r="9.5" fill="#85A3B2" />
+                <circle cx="186.5" cy="9.5" r="9.5" fill="#85A3B2" />
+                <rect x="110" width="50" height="19" rx="9.5" fill="#DD2242" />
+            </svg>
 
             <div class="explore-bottom-div">
                 <div class="explore-bottom-card-first">
@@ -131,17 +172,19 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div class="explore-bottom-card">
-                    <h1>100+</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
-                </div>
-                <div class="explore-bottom-card">
-                    <h1>43,000+</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo.</p>
-                </div>
-                <div class="explore-bottom-card">
-                    <h1>30+</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
+                <div class="explore-bottom-cards-adaptive">
+                    <div class="explore-bottom-card">
+                        <h1>100+</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
+                    </div>
+                    <div class="explore-bottom-card">
+                        <h1>43,000+</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo.</p>
+                    </div>
+                    <div class="explore-bottom-card">
+                        <h1>30+</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -151,66 +194,131 @@
                 Fusce sit amet magna commodo, tempus dolor sit amet, laoreet elit. Donec mauris tortor, elementum sed.
             </p>
             <button>Learn More</button>
+            <img src="./src/hills-bg-adaptiv-two.webp" alt="">
         </section>
-        <section class="live-section">
+        <section class="live-section" id="about">
             <h1>Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h1>
             <img src="./src/live-main-img.webp" alt="">
-            <div class="live-card">
-                <img src="./src/live-first-img.webp" alt="">
-                <h1>In The Country</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.
-                </p>
-            </div>
-            <div class="live-card">
-                <img src="./src/live-two-img.webp" alt="">
-                <h1>In The Country</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in.</p>
+            <div class="live-card-container">
+                <div class="live-card">
+                    <img src="./src/live-first-img.webp" alt="">
+                    <div>
+                        <h2>In The Country</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in
+                            lectustempus.</p>
+                    </div>
+                </div>
+                <div class="live-card">
+                    <img src="./src/live-two-img.webp" alt="">
+                    <div>
+                        <h2>In The Country</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus
+                            tempus.</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="galary-section">
+        <section class="galary-section" id="gallery">
             <h1>Photo Gallery</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget
                 tincidunt.</p>
-            <img src="./src/galary-img-one.webp" alt="">
-            <img src="./src/galary-img-two.webp" alt="">
-            <img src="./src/galary-img-three.webp" alt="">
-            <img src="./src/galary-img-four.webp" alt="">
-            <img src="./src/galary-img-fife.webp" alt="">
-            <img src="./src/galary-img-six.webp" alt="">
+            <div class="galary-img-main-div">
+                <div>
+                    <img src="./src/galary-img-one.webp" alt="" class="galary-img-one">
+                    <img src="./src/galary-img-four.webp" alt="" class="galary-img-four">
+                    <img src="./src/galary-img-three.webp" alt="" class="galary-img-three">
+                </div>
+                <div>
+                    <img src="./src/galary-img-two.webp" alt="" class="galary-img-two">
+                    <img src="./src/galary-img-six.webp" alt="" class="galary-img-six">
+                    <img src="./src/galary-img-fife.webp" alt="" class="galary-img-fife">
+                </div>
+            </div>
         </section>
         <section class="instruction-section">
+            <h1>Getting there</h1>
+            <svg width="3" height="818" viewBox="0 0 3 818" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.3" width="2.93434" height="582.215" fill="#151439" fill-opacity="0.4" />
+            </svg>
+
             <div class="instruction-part">
                 <p class="instruction-num">1</p>
-                <h2 class="instruction-title">Bookings your flights</h2>
-                <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
-                <p class="instruction-show-text">Show more</p>
+                <div>
+                    <h2 class="instruction-title">Bookings your flights</h2>
+                    <p class="instruction-description-adaptive">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus,
+                        eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada.
+                        Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
+                    <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
+                    <p class="instruction-show-text">Show more</p>
+                </div>
             </div>
             <div class="instruction-part">
                 <p class="instruction-num">2</p>
-                <h2 class="instruction-title">Choosing your hotel</h2>
-                <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
-                <p class="instruction-show-text">Show more</p>
-                <img src="" alt="">
-                <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
-                <p class="instruction-show-text">Show more</p>
+                <div>
+                    <h2 class="instruction-title">Choosing your hotel</h2>
+                    <p class="instruction-description-adaptive">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus,
+                        eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada.
+                        Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
+                    <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
+                    <p class="instruction-show-text">Show more</p>
+                </div>
+            </div>
+            <div class="instruction-part-adaptive">
+                <img src="./src/instruction-img.webp" alt="">
+                <div>
+                    <h2 class="instruction-title-img">Travelling there</h2>
+                    <p class="instruction-description-adaptive-img">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Phasellus dapibus mauris in lectus tempus, eget tincidunt.</p>
+                    <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
+                    <p class="instruction-show-text">Show more</p>
+                </div>
             </div>
             <div class="instruction-part">
                 <p class="instruction-num">3</p>
-                <h2 class="instruction-title">Planning your experiences</h2>
-                <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
-                <p class="instruction-show-text">Show more</p>
+                <div>
+                    <h2 class="instruction-title">Planning your experiences</h2>
+                    <p class="instruction-description-adaptive">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus,
+                        eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada.
+                        Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
+                    <p class="instruction-description">Lorem ipsum dolor set,,,,</p>
+                    <p class="instruction-show-text">Show more</p>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        src
-        <div>
+    <footer class="footer">
+        <div class="footer-main-div">
+            <img src="./src/footer-pointer.webp" alt="" class="footer-pointer">
             <img src="./src/footer-text.webp" alt="">
-            <p>About</p>
-            <p>Pricing</p>
-            <p>Company</p>
-            <p>Blog</p>
-            src*3
+            <div class="footer-text-div">
+                <p>About</p>
+                <p>Pricing</p>
+                <p>Company</p>
+                <p>Blog</p>
+            </div>
+            <div class="footer-soc-logo">
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.3749 24.5321V15.8169H20.1972L20.6582 11.9435H17.3749V10.0572C17.3749 9.05976 17.4021 8.0701 18.8887 8.0701H20.3945V5.30061C20.3945 5.25897 19.1011 5.16504 17.7926 5.16504C15.0598 5.16504 13.3487 6.7696 13.3487 9.71631V11.9435H10.3291V15.8169H13.3487V24.5321H17.3749Z"
+                        fill="white" />
+                </svg>
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M25.8228 24.5316H21.85V17.297C21.85 15.3124 21.0088 14.2054 19.5002 14.2054C17.8584 14.2054 16.8841 15.3589 16.8841 17.297V24.5316H12.9114V11.094H16.8841V12.6052C16.8841 12.6052 18.1306 10.3291 20.9393 10.3291C23.749 10.3291 25.8228 12.1132 25.8228 15.8055C25.8228 19.4967 25.8228 24.5316 25.8228 24.5316ZM7.10166 7.74646C6.03157 7.74646 5.16455 6.87906 5.16455 5.80936C5.16455 4.74045 6.03157 3.87305 7.10166 3.87305C8.17095 3.87305 9.03797 4.74045 9.03797 5.80936C9.03876 6.87906 8.17095 7.74646 7.10166 7.74646ZM5.16455 24.5316H9.03797V11.6203H5.16455V24.5316Z"
+                        fill="white" />
+                </svg>
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24.3703 13.6899H15.6846C15.6846 14.5932 15.6846 16.3998 15.6791 17.3031H20.7122C20.5194 18.2064 19.8355 19.471 18.8693 20.1078C18.8684 20.1069 18.8675 20.1132 18.8656 20.1123C17.5811 20.9605 15.8858 21.1529 14.6271 20.9C12.654 20.508 11.0926 19.0771 10.4586 17.2597C10.4623 17.257 10.4651 17.2317 10.4679 17.2299C10.071 16.1026 10.071 14.5932 10.4679 13.6899H10.4669C10.9782 12.0297 12.5867 10.5149 14.5625 10.1003C16.1516 9.76333 17.9447 10.1283 19.2634 11.3622C19.4387 11.1905 21.6904 8.99192 21.8593 8.81307C17.354 4.73291 10.1403 6.16824 7.44096 11.4371H7.44004C7.44004 11.4371 7.44096 11.4371 7.43543 11.4471C6.10009 14.035 6.15546 17.0845 7.44465 19.5487C7.44096 19.5514 7.43819 19.5532 7.43543 19.5559C8.60373 21.8231 10.7299 23.562 13.2917 24.2241C16.0132 24.9377 19.4766 24.4499 21.7966 22.3516C21.7975 22.3525 21.7984 22.3534 21.7993 22.3543C23.765 20.5838 24.9886 17.5677 24.3703 13.6899Z"
+                        fill="white" />
+                </svg>
+
+
+            </div>
             <p>Copyright © 2019</p>
         </div>
     </footer>

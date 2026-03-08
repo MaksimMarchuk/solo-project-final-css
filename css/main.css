@@ -37,6 +37,17 @@ p {
 
 a {
   cursor: default;
+  text-decoration: none;
+}
+
+button {
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+button:hover {
+  transform: translateY(-5px);
+  scale: 1.05;
+  box-shadow: 0 0 30px 10px rgba(255, 140, 140, 0.6);
 }
 
 .header {
@@ -44,25 +55,24 @@ a {
   background-position: center;
   background-size: cover;
 }
-.header nav {
-  display: flex;
-  justify-content: center;
+.header nav .nav-sub-text {
+  display: none;
 }
-.header ul {
+.header nav .nav-section {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
-.header ul .nav-logo-text {
-  margin-right: 200px;
 }
 .header .preview-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.header .preview-section .preview-svg-text-div svg {
+  display: none;
 }
 .header .preview-section h1 {
   font-weight: 900;
@@ -126,8 +136,118 @@ a {
   width: 334px;
   margin-bottom: 40px;
 }
+@media (min-width: 1200px) {
+  .header nav .nav-section .nav-sub-text {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    gap: 20px;
+  }
+  .header nav .nav-section .nav-sub-text a {
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+  }
+  .header nav .nav-section .nav-sub-text a:hover {
+    transform: translateY(-10px);
+    color: #939393;
+  }
+  .header nav .nav-section .nav-full-text-div {
+    display: flex;
+    gap: 40px;
+  }
+  .header .preview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .preview-section .preview-svg-text-div {
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+  .header .preview-section .preview-svg-text-div svg {
+    display: block;
+  }
+  .header .preview-section .preview-cards-div {
+    display: flex;
+    flex-direction: row;
+  }
+  .header .preview-section .preview-cards-div-adaptive {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+  }
+  .header .preview-section .preview-cards-div-adaptive .preview-video {
+    position: relative;
+    top: 28px;
+    width: 417px;
+    height: 254px;
+    margin: 0;
+  }
+  .header .preview-section .preview-head-text {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 130px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  .header .preview-section .preview-btn {
+    width: 271px;
+    height: 82px;
+    border-radius: 211px;
+  }
+}
 
-.main .learn-section .learn-div {
+.main .learn-section .learn-div-one {
+  background-image: url(/src/learn-bg-two-img.webp);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(1, 10, 32);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.main .learn-section .learn-div-one img {
+  width: 414px;
+  margin-top: 40px;
+}
+.main .learn-section .learn-div-one h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0%;
+  color: white;
+  width: 414px;
+}
+.main .learn-section .learn-div-one p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #939393;
+  width: 415px;
+}
+.main .learn-section .learn-div-one button {
+  width: 414px;
+  height: 76px;
+  border-radius: 32px;
+  border-style: none;
+  background-color: #DD2242;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+}
+.main .learn-section .learn-div-two {
   background-image: url(/src/learn-bg-first-img.webp);
   display: flex;
   flex-direction: column;
@@ -137,11 +257,11 @@ a {
   background-size: cover;
   padding-bottom: 40px;
 }
-.main .learn-section .learn-div img {
+.main .learn-section .learn-div-two img {
   width: 414px;
   margin-top: 40px;
 }
-.main .learn-section .learn-div h2 {
+.main .learn-section .learn-div-two h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 46px;
@@ -149,7 +269,7 @@ a {
   color: white;
   width: 414px;
 }
-.main .learn-section .learn-div p {
+.main .learn-section .learn-div-two p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -157,7 +277,7 @@ a {
   color: #939393;
   width: 415px;
 }
-.main .learn-section .learn-div button {
+.main .learn-section .learn-div-two button {
   width: 414px;
   height: 76px;
   border-radius: 32px;
@@ -189,6 +309,13 @@ a {
   color: rgb(1, 10, 32);
   max-width: 314px;
 }
+.main .explore-section circle {
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.main .explore-section circle:hover {
+  fill: #7b888f;
+}
 .main .explore-section .explore-scrole {
   display: flex;
   justify-content: center;
@@ -202,8 +329,16 @@ a {
 .main .explore-section .explore-scrole .explore-img-three {
   display: none;
 }
+.main .explore-section .explore-scrole svg {
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.main .explore-section .explore-scrole svg:hover {
+  scale: 1.25;
+}
 .main .explore-section .explore-bottom-div {
   margin-top: 760px;
+  width: 100%;
 }
 .main .explore-section .explore-bottom-div .explore-bottom-card-first {
   background-color: rgba(2, 12, 33, 0.87);
@@ -235,7 +370,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
 }
 .main .explore-section .explore-bottom-div .explore-bottom-card h1 {
   font-weight: 700;
@@ -255,4 +389,545 @@ a {
   text-align: center;
   color: #939393;
   max-width: 314px;
+}
+.main .hills-section {
+  background-image: url(/src/hills-bg-adaptiv-one.webp);
+  background-repeat: no-repeat;
+  height: 741px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .hills-section h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: black;
+  width: 314px;
+}
+.main .hills-section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #939393;
+  width: 314px;
+}
+.main .hills-section button {
+  width: 314px;
+  height: 73px;
+  border-radius: 122px;
+  border-style: none;
+  background-color: #DD2242;
+  color: white;
+}
+.main .hills-section img {
+  content: url(/src/hills-bg-adaptiv-two.webp);
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  margin-top: 380px;
+}
+.main .live-section {
+  background-image: url(/src/live-bg-img.webp);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(1, 10, 32);
+}
+.main .live-section h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 314px;
+  height: 380px;
+  color: white;
+  margin-top: 60px;
+}
+.main .live-section img {
+  width: 314px;
+  height: 192px;
+}
+.main .live-section .live-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .live-section .live-card img {
+  width: 314px;
+  height: 192px;
+  margin-top: 50px;
+}
+.main .live-section .live-card h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+}
+.main .live-section .live-card p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #939393;
+  width: 314px;
+  height: 142px;
+}
+.main .galary-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.main .galary-section h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+.main .galary-section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #939393;
+  width: 314px;
+}
+.main .galary-section .galary-img-main-div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.main .galary-section .galary-img-main-div div {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .galary-section .galary-img-main-div div img {
+  width: 151px;
+}
+.main .galary-section .galary-img-main-div img {
+  width: 100%;
+}
+.main .instruction-section {
+  background-color: rgb(220, 232, 242);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.main .instruction-section h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.main .instruction-section svg {
+  display: none;
+}
+.main .instruction-section .instruction-part-adaptive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .instruction-section .instruction-part-adaptive img {
+  width: 314px;
+}
+.main .instruction-section .instruction-part-adaptive h2 {
+  display: none;
+}
+.main .instruction-section .instruction-part-adaptive .instruction-description-adaptive {
+  display: none;
+}
+.main .instruction-section .instruction-part-adaptive .instruction-description-adaptive-img {
+  display: none;
+}
+.main .instruction-section .instruction-part-adaptive .instruction-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #939393;
+}
+.main .instruction-section .instruction-part-adaptive .instruction-show-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #DD2242;
+}
+.main .instruction-section .instruction-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .instruction-section .instruction-part img {
+  width: 314px;
+}
+.main .instruction-section .instruction-part .instruction-num {
+  background-color: #DD2242;
+  padding: 9px 21px 9px 21px;
+  border-radius: 100%;
+  font-weight: 500;
+  font-size: 26.41px;
+  line-height: 38.15px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+.main .instruction-section .instruction-part h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgb(1, 10, 32);
+}
+.main .instruction-section .instruction-part .instruction-description-adaptive {
+  display: none;
+}
+.main .instruction-section .instruction-part .instruction-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #939393;
+}
+.main .instruction-section .instruction-part .instruction-show-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #DD2242;
+}
+@media (min-width: 1200px) {
+  .main .learn-section .learn-div-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    height: 771px;
+  }
+  .main .learn-section .learn-div-one button {
+    width: 180px;
+    height: 59px;
+    border-radius: 32px;
+  }
+  .main .learn-section .learn-div-one img {
+    width: 630px;
+  }
+  .main .learn-section .learn-div-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    height: 771px;
+  }
+  .main .learn-section .learn-div-two button {
+    width: 180px;
+    height: 59px;
+    border-radius: 32px;
+  }
+  .main .learn-section .learn-div-two img {
+    width: 630px;
+  }
+  .main .explore-section h1 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    max-width: 615px;
+  }
+  .main .explore-section .explore-scrole .explore-img-one {
+    display: block;
+  }
+  .main .explore-section .explore-scrole .explore-img-three {
+    display: block;
+  }
+  .main .explore-section .explore-bottom-div .explore-bottom-card-first h1 {
+    width: 615px;
+  }
+  .main .explore-section .explore-bottom-div .explore-bottom-card-first p {
+    width: 484px;
+  }
+  .main .explore-section .explore-bottom-div .explore-bottom-cards-adaptive {
+    display: flex;
+  }
+  .main .explore-section .explore-bottom-div .explore-bottom-cards-adaptive .explore-bottom-card {
+    width: 100%;
+    padding-bottom: 211px;
+  }
+  .main .hills-section {
+    background-image: url(/src/hills-bg-first-img.webp);
+    padding-bottom: 0;
+  }
+  .main .hills-section h1 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 614px;
+  }
+  .main .hills-section p {
+    width: 470px;
+  }
+  .main .hills-section button {
+    width: 210px;
+    height: 64px;
+  }
+  .main .hills-section img {
+    content: url(/src/hills-bg-two-img.webp);
+    margin-top: 0;
+  }
+  .main .live-section {
+    padding-bottom: 200px;
+  }
+  .main .live-section h1 {
+    width: 906px;
+    height: 142px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+  .main .live-section img {
+    width: 1056px;
+    height: 594px;
+  }
+  .main .live-section .live-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 100px;
+  }
+  .main .live-section .live-card h2 {
+    margin: 0;
+    text-align: start;
+  }
+  .main .live-section .live-card p {
+    position: relative;
+    top: 60px;
+    height: 80px;
+    text-align: start;
+    width: 334px;
+  }
+  .main .live-section .live-card-container {
+    display: flex;
+  }
+  .main .galary-section h1 {
+    margin-top: 200px;
+  }
+  .main .galary-section p {
+    width: 451px;
+    height: 47px;
+    margin-bottom: 50px;
+  }
+  .main .galary-section .galary-img-main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main .galary-section .galary-img-main-div div {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  .main .galary-section .galary-img-main-div div .galary-img-one {
+    width: 370px;
+    height: 530px;
+  }
+  .main .galary-section .galary-img-main-div div .galary-img-two {
+    width: 370px;
+    height: 210px;
+  }
+  .main .galary-section .galary-img-main-div div .galary-img-three {
+    width: 370px;
+    height: 370px;
+  }
+  .main .galary-section .galary-img-main-div div .galary-img-six {
+    width: 370px;
+    height: 530px;
+    position: relative;
+    bottom: 320px;
+  }
+  .main .galary-section .galary-img-main-div div .galary-img-four {
+    width: 370px;
+    height: 210px;
+  }
+  .main .galary-section .galary-img-main-div div .galary-img-fife {
+    width: 370px;
+    height: 370px;
+    position: relative;
+    bottom: 160px;
+  }
+  .main .instruction-section {
+    display: flex;
+    align-items: start;
+    padding-left: 25%;
+  }
+  .main .instruction-section svg {
+    position: absolute;
+    margin-left: 27.5px;
+    margin-top: 182px;
+    display: block;
+    z-index: 1;
+  }
+  .main .instruction-section .instruction-part-adaptive {
+    padding-left: 115px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 60px;
+  }
+  .main .instruction-section .instruction-part-adaptive .instruction-title {
+    text-align: start;
+  }
+  .main .instruction-section .instruction-part-adaptive .instruction-description {
+    display: none;
+  }
+  .main .instruction-section .instruction-part-adaptive .instruction-description-adaptive {
+    display: block;
+    width: 1000px;
+    font-weight: 400;
+    font-size: 23.47px;
+    line-height: 38.15px;
+    letter-spacing: 0px;
+    color: #939393;
+  }
+  .main .instruction-section .instruction-part-adaptive .instruction-show-text {
+    display: none;
+  }
+  .main .instruction-section .instruction-part-adaptive .instruction-description-adaptive-img {
+    display: block;
+    width: 446px;
+    font-weight: 400;
+    font-size: 23.47px;
+    line-height: 38.15px;
+    letter-spacing: 0px;
+    color: #939393;
+  }
+  .main .instruction-section .instruction-part-adaptive .instruction-title-img {
+    display: block;
+    text-align: start;
+  }
+  .main .instruction-section .instruction-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 60px;
+  }
+  .main .instruction-section .instruction-part .instruction-title {
+    text-align: start;
+  }
+  .main .instruction-section .instruction-part .instruction-description {
+    display: none;
+  }
+  .main .instruction-section .instruction-part .instruction-description-adaptive {
+    display: block;
+    width: 1000px;
+    font-weight: 400;
+    font-size: 23.47px;
+    line-height: 38.15px;
+    letter-spacing: 0px;
+    color: #939393;
+  }
+  .main .instruction-section .instruction-part .instruction-show-text {
+    display: none;
+  }
+  .main .instruction-section .instruction-part .instruction-num {
+    z-index: 2;
+  }
+}
+
+.footer {
+  background-color: rgb(1, 10, 32);
+}
+.footer .footer-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .footer-main-div p {
+  font-weight: 700;
+  font-size: 22.94px;
+  line-height: 35.69px;
+  letter-spacing: 0.64px;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.footer .footer-main-div p:hover {
+  transform: translateY(-10px);
+  color: #939393;
+}
+.footer .footer-main-div .footer-soc-logo {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.footer .footer-main-div .footer-pointer {
+  position: relative;
+  bottom: 50px;
+}
+.footer .footer-main-div .footer-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .footer-main-div svg {
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.footer .footer-main-div svg path {
+  transition-duration: 0.5s;
+}
+.footer .footer-main-div svg:hover path {
+  fill: #939393;
+}
+.footer .footer-main-div svg:hover {
+  transform: translateY(-10px);
+}
+@media (min-width: 1200px) {
+  .footer .footer-main-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
+  }
+  .footer .footer-main-div .footer-pointer {
+    left: 1500px;
+  }
+  .footer .footer-main-div .footer-text-div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footer .footer-main-div .footer-soc-logo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 }

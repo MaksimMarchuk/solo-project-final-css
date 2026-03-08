@@ -1,40 +1,52 @@
-body{
+body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-h1{
+h1 {
     cursor: default;
 }
 
-h2{
+h2 {
     cursor: default;
 }
 
-h3{
+h3 {
     cursor: default;
 }
 
-h4{
+h4 {
     cursor: default;
 }
 
-h5{
+h5 {
     cursor: default;
 }
 
-h6{
+h6 {
     cursor: default;
 }
 
-p{
+p {
     cursor: default;
 }
 
-a{
+a {
     cursor: default;
+    text-decoration: none;
+}
+
+button {
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px);
+        scale: 1.05;
+        box-shadow: 0 0 30px 10px rgba(255, 140, 140, 0.6);
+    }
 }
