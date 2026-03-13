@@ -92,7 +92,7 @@
 
                 <div class="preview-interactive-div">
                     <h1 class="preview-head-text">explore indonesia</h1>
-                    <button class="preview-btn">Start travelling</button>
+                    <button class="preview-btn" data-modal-open>Start travelling</button>
                 </div>
             </div>
             <div class="preview-cards-div-adaptive">
@@ -322,6 +322,49 @@
             <p>Copyright © 2019</p>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn-close" data-modal-close>&times;</button>
+            <h1>ГОТОВІ ДО ПОДОРОЖІ?</h1>
+            <p>Залиште свої контакти, і наш гід зв'яжеться з вами протягом 15 хвилин.</p>
+            <form>
+                <label>
+                    <div>
+                        <p>Ім'я</p>
+                        <input type="text" name="name" required placeholder="Як вас звати?" class="blank-input">
+                    </div>
+                </label>
+                <label>
+                    <div>
+                        <p>Телефон</p>
+                        <input type="tel" name="phone" pattern="^\+380\d{9}$" required placeholder="+### -- --- -- --" class="blank-input">
+                    </div>
+                </label>
+                <label>
+                    <div>
+                        <p>Дата вильоту</p>
+                        <input type="date" name="date" required class="blank-input">
+                    </div>
+                </label>
+                <label>
+                    <div>
+                        <p>Острів мрії</p>
+                        <select name="island" required class="blank-input">
+                            <option value="" disabled selected hidden>Оберіть варіант...</option>
+                            <option value="1">Балі</option>
+                            <option value="2">Ява</option>
+                            <option value="3">Ломбок</option>
+                        </select>
+                    </div>
+                </label>
+                <div>
+                    <button>ЗАБРОНЮВАТИ ПРИГОДУ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="modal.js"></script>
 </body>
 
 </html>

@@ -33,6 +33,13 @@
         .footer-pointer {
             position: relative;
             bottom: 50px;
+            transition-duration: 0.5s;
+            cursor: pointer;
+
+            &:hover{
+                scale: 1.05;
+                transform: translateY(-10px);
+            }
         }
 
         .footer-text-div {

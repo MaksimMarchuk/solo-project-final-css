@@ -891,6 +891,12 @@ button:hover {
 .footer .footer-main-div .footer-pointer {
   position: relative;
   bottom: 50px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.footer .footer-main-div .footer-pointer:hover {
+  scale: 1.05;
+  transform: translateY(-10px);
 }
 .footer .footer-main-div .footer-text-div {
   display: flex;
@@ -930,4 +936,82 @@ button:hover {
     justify-content: center;
     gap: 20px;
   }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+.backdrop .backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop .modal {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  width: 512px;
+  max-width: 90%;
+  height: 621px;
+  border-radius: 14px;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backdrop .modal .btn-close {
+  border-style: none;
+  font-size: 30px;
+  align-self: flex-end;
+}
+.backdrop .modal .btn-close:hover {
+  box-shadow: none;
+}
+.backdrop .modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backdrop .modal form button {
+  background-color: #DD2242;
+  width: 408px;
+  height: 51px;
+  border-style: none;
+  border-radius: 11px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+}
+.backdrop .modal h1 {
+  text-align: center;
+  margin-bottom: 1px;
+}
+.backdrop .modal p {
+  width: 400px;
+  text-align: center;
+}
+.backdrop .modal .blank-input {
+  width: 400px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 11px;
+  border-style: none;
+  border: 1px solid gray;
+}
+.backdrop .modal label p {
+  text-align: start;
+  margin: 3px;
+  margin-top: 20px;
 }

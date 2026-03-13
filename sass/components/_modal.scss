@@ -1,0 +1,90 @@
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+    .backdrop.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .modal {
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        width: 512px;
+        max-width: 90%;
+        height: 621px;
+        border-radius: 14px;
+        border: 2px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .btn-close {
+            border-style: none;
+            font-size: 30px;
+            align-self: flex-end;
+
+            &:hover{
+                box-shadow: none;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button{
+                background-color: $main-red;
+                width: 408px;
+                height: 51px;
+                border-style: none;
+                border-radius: 11px;
+                margin-top: 20px;
+                font-size: 18px;
+                color: white;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1px;
+        }
+
+        p {
+            width: 400px;
+            text-align: center;
+        }
+
+        .blank-input{
+            width: 400px;
+            padding: 10px 20px 10px 20px;
+            border-radius: 11px;
+            border-style: none;
+            border: 1px solid gray;
+        }
+
+        label{
+            
+            p{
+                text-align: start;
+                margin: 3px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
