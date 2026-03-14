@@ -332,25 +332,27 @@
                 <label>
                     <div>
                         <p>Ім'я</p>
-                        <input type="text" name="name" required placeholder="Як вас звати?" class="blank-input">
+                        <input type="text" id="strName" name="name" required placeholder="Як вас звати?"
+                            class="blank-input">
                     </div>
                 </label>
                 <label>
                     <div>
                         <p>Телефон</p>
-                        <input type="tel" name="phone" pattern="^\+380\d{9}$" required placeholder="+### -- --- -- --" class="blank-input">
+                        <input type="tel" id="strTel" name="phone" pattern="^\+380\d{9}$" required
+                            placeholder="+### -- --- -- --" class="blank-input">
                     </div>
                 </label>
                 <label>
                     <div>
                         <p>Дата вильоту</p>
-                        <input type="date" name="date" required class="blank-input">
+                        <input type="date" id="strDate" name="date" required class="blank-input">
                     </div>
                 </label>
                 <label>
                     <div>
                         <p>Острів мрії</p>
-                        <select name="island" required class="blank-input">
+                        <select name="island" id="strIsland" required class="blank-input">
                             <option value="" disabled selected hidden>Оберіть варіант...</option>
                             <option value="1">Балі</option>
                             <option value="2">Ява</option>
@@ -359,11 +361,20 @@
                     </div>
                 </label>
                 <div>
-                    <button>ЗАБРОНЮВАТИ ПРИГОДУ</button>
+                    <button type="submit" data-modal-open2>ЗАБРОНЮВАТИ ПРИГОДУ</button>
                 </div>
             </form>
         </div>
+
+        <div class="backdrop2 is-hidden" data-modal2>
+            <div class="modal2">
+                <button class="btn-close2" data-modal-close>&times;</button>
+
+            </div>
+        </div>
     </div>
+
+
     <script src="modal.js"></script>
 </body>
 
