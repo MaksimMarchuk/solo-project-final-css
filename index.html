@@ -364,12 +364,22 @@
                     <button type="submit" data-modal-open2>ЗАБРОНЮВАТИ ПРИГОДУ</button>
                 </div>
             </form>
-        </div>
-
-        <div class="backdrop2 is-hidden" data-modal2>
-            <div class="modal2">
-                <button class="btn-close2" data-modal-close>&times;</button>
-
+            <div class="backdrop2 is-hidden" data-modal2>
+                <div class="modal2">
+                    <button class="btn-close2" data-modal-close2>&times;</button>
+                    <p id="name"></p>
+                    <p id="tel"></p>
+                    <p id="data"></p>
+                    <p id="travel"></p>
+                    <form>
+                        <select name="check" id="checking" required>
+                            <option value="" disabled selected hidden>Is data correct?</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>
+                        <button class="btn-close2" onclick="btnClose()" data-modal-close>&times;</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
